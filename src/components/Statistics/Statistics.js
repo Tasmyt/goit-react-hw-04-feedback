@@ -21,12 +21,12 @@ export const Statistics = ({
         Bad: {bad}        
       </StatisticsBlock>
 
-      <StatisticsTotal>Total: {total()} </StatisticsTotal>
+      <StatisticsTotal>Total: {total} </StatisticsTotal>
       <StatisticsTotal>
         Positive feedback:{' '}
-        {isNaN(positiveFeedbackPercentage())
+        {isNaN(positiveFeedbackPercentage)
           ? 100
-          : positiveFeedbackPercentage()}
+          : positiveFeedbackPercentage}
         %{' '}
       </StatisticsTotal>
     </StatisticsBox>
@@ -36,6 +36,6 @@ Statistics.propTypes = {
     good: PropTypes.number.isRequired,
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,  
-    total: PropTypes.func.isRequired,
-  positiveFeedbackPercentage: PropTypes.func.isRequired,
+    total: PropTypes.number.isRequired,
+  positiveFeedbackPercentage: PropTypes.number.isRequired,
 };
